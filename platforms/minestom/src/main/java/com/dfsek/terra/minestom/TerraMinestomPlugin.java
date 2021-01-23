@@ -14,6 +14,13 @@ import java.io.File;
 import java.util.logging.Logger;
 
 public class TerraMinestomPlugin implements TerraPlugin {
+
+    private final TerraBootstrapPlugin bootstrapPlugin;
+
+    public TerraMinestomPlugin(TerraBootstrapPlugin bootstrapPlugin) {
+        this.bootstrapPlugin = bootstrapPlugin;
+    }
+
     @Override
     public WorldHandle getWorldHandle() {
         return null;
@@ -31,7 +38,7 @@ public class TerraMinestomPlugin implements TerraPlugin {
 
     @Override
     public Logger getLogger() {
-        return null;
+        return bootstrapPlugin.plugin.getLogger();
     }
 
     @Override

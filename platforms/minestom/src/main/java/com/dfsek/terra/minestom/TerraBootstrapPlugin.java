@@ -8,7 +8,7 @@ public class TerraBootstrapPlugin extends Extension {
 
     @Override
     public void initialize() {
-        this.plugin = new TerraMinestomPlugin();
+        this.plugin = new TerraMinestomPlugin(this);
     }
 
     @Override
