@@ -33,3 +33,5 @@ gradleEnterprise {
 //        publishAlwaysIf(true)
     }
 }
+include("platforms:minestom")
+findProject(":platforms:minestom")?.name = "minestom"
